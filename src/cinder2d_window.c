@@ -41,7 +41,7 @@ int cinder2d_window_init(struct Cinder2D_Window *self, const char *title, unsign
     }
     strcpy(self->title, title);
 
-    self->sdl_window = SDL_CreateWindow(title, width, height, flags);
+    self->sdl_window = SDL_CreateWindow(title, (int)width, (int)height, flags);
     if (!self->sdl_window)
     {
         #if CINDER2D_DEBUG_MODE

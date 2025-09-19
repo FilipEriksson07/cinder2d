@@ -14,7 +14,7 @@ typedef struct Cinder2D_Window
     SDL_GLContext gl_context;
     bool current_context;
 
-    void (*cinder2d_window_init)(struct Cinder2D_Window *self);
+    int (*cinder2d_window_init)(struct Cinder2D_Window *self, const char *title, unsigned int width, unsigned int height, SDL_WindowFlags flags);
     void (*cinder2d_window_destroy)(struct Cinder2D_Window *self);
 } Cinder2D_Window;
 
